@@ -17,10 +17,10 @@ $(document).ready(function () {
 		],
 		"aoColumns": [
 			{ "sWidth": "1%" },
-			{ "sWidth": "10%" },
+			{ "sWidth": "7%" },
 			{ "sWidth": "20%" },
-			{ "sWidth": "40%" },
-			{ "sWidth": "15%" },
+			{ "sWidth": "48%" },
+			{ "sWidth": "10%" },
 			{ "sWidth": "10%" },
 			{ "sWidth": "10%" },
 			{ "sWidth": "5%" }
@@ -62,6 +62,10 @@ $(document).ready(function () {
 					$(this).val(oSettings.aoPreSearchCols[index+3].sSearch);
 				}
 			});
+
+			$('input').addClass('form-control');
+			$('input[type=checkbox]').removeClass('form-control');
+			$('select').addClass('form-control');
 		}
 	});
 
@@ -105,6 +109,10 @@ $(document).ready(function () {
 				document.location.href = $($.parseHTML(aData[1])).attr('href');
 
 			});
+		},
+		"fnInitComplete": function (oSettings) {
+			$('input').addClass('form-control');
+			$('select').addClass('form-control');
 		}
 	});
 

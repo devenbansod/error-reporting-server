@@ -11,8 +11,18 @@ table.error-report tr td:first-child {
   width: 15%;
 }
 
-table.error-report tr pre{
+table.error-report tr pre {
   word-break: normal;
+}
+
+#reports_table tr {
+   line-height: 20px;
+   min-height: 20px;
+   height: 20px;
+}
+
+#reports_table tr td {
+  padding: 3px;
 }
 
 .count {

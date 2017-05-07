@@ -47,6 +47,44 @@ class AppController extends Controller
         ),
     );
 
+    public $css_files = array(
+        'jquery.dataTables.min',
+        'jquery.jqplot.min',
+        'jquery.dataTables_themeroller',
+        'bootstrap.min',
+        'bootstrap.min.css',
+        'shCore',
+        'shThemeDefault',
+        'custom'
+    );
+
+    public $js_files = array(
+        'jquery.min',
+        'jquery.dataTables.min',
+        'bootstrap.min',
+        'shCore',
+        'shBrushXml',
+        'shBrushJScript',
+        'shBrushPhp',
+        'raphael-min',
+        'g.raphael-min',
+        'g.pie-min',
+        'g.line-min',
+        'g.bar-min',
+        'g.dot-min',
+        'jquery.jqplot.min.js',
+        'jqplot.barRenderer.min.js',
+        'jqplot.highlighter.min.js',
+        'jqplot.dateAxisRenderer.min.js',
+        'jqplot.categoryAxisRenderer.min.js',
+        'jqplot.pointLabels.min.js',
+        'jqplot.canvasTextRenderer.min.js',
+        'jqplot.canvasAxisTickRenderer.min.js',
+        'jqplot.cursor.min.js',
+        'pie',
+        'custom'
+    );
+
     /**
      * Initialization hook method.
      *
@@ -96,6 +134,8 @@ class AppController extends Controller
             $this->_checkAccess();
         }
         $this->set('notif_count', $notif_count);
+        $this->set('css_files', $this->css_files);
+        $this->set('js_files', $this->js_files);
     }
 
     protected function _checkAccess()
